@@ -1,4 +1,3 @@
-
 public class DigitalVideoDisc {
     private String title;
     private String category;
@@ -6,22 +5,31 @@ public class DigitalVideoDisc {
     private int length;
     private float cost;
 
+    // classifier member
+    private static int nbDigitalVideoDisc = 0;
+
+    // instance
+    private int id;
+
+    // constructor
     public DigitalVideoDisc(String title) {
         this.title = title;
+        nbDigitalVideoDisc++; 
+        this.id = nbDigitalVideoDisc; 
     }
 
     public DigitalVideoDisc(String title, String category) {
-        this(title);
+        this(title); 
         this.category = category;
     }
 
     public DigitalVideoDisc(String title, String category, String director) {
-        this(title, category);
+        this(title, category); 
         this.director = director;
     }
 
     public DigitalVideoDisc(String title, String category, String director, int length) {
-        this(title, category, director);
+        this(title, category, director); 
         this.length = length;
     }
 
@@ -30,6 +38,7 @@ public class DigitalVideoDisc {
         this.cost = cost;
     }
 
+    // Getters
     public String getTitle() {
         return title;
     }
@@ -50,6 +59,15 @@ public class DigitalVideoDisc {
         return cost;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public static int getNbDigitalVideoDisc() {
+        return nbDigitalVideoDisc;
+    }
+
+    // Setters
     public void setTitle(String title) {
         this.title = title;
     }
