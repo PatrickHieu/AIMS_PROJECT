@@ -9,8 +9,17 @@ public class CartTest {
         cart.addDigitalVideoDisc(dvd1);
         cart.addDigitalVideoDisc(dvd2);
         cart.addDigitalVideoDisc(dvd3);
-        
+
         // Print list of Cart
         cart.printCart();
+
+        // Search with ID
+        DigitalVideoDisc foundById = cart.searchById(2); // Starwar ID
+        if (foundById != null) {
+            System.out.println("Founded DVD with ID: " + foundById.getTitle());
+        }
+
+        // Search with Title
+        cart.searchByTitle("Star");
     }
 }

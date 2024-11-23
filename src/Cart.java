@@ -60,6 +60,31 @@ public class Cart {
         System.out.println("***************************************************");
     }
 
+    //Search Cart by ID
+    public DigitalVideoDisc searchById(int itemID) {
+        for (int i = 0; i < itemOrdered; i++) {
+            if (items[i].getId() == itemID) {
+                return items[i];
+            }
+        }
+        System.out.println("Not found DVD with ID: " + itemID);
+        return null; //Not found
+    }
+    
+    //Search DVD by Title
+    public void searchByTitle(String title) {
+        boolean found = false;
+        for (int i = 0; i < itemOrdered; i++) {
+            if (items[i].getTitle().toLowerCase().contains(title.toLowerCase())) {
+                System.out.println("Founded DVD with title: " + items[i].getTitle());
+                found = true;
+            }
+        }
+        if (!found) {
+            System.out.println("Not found DVD with title: " + title);
+        }
+    }
+
     // Delete DVD out of Cart
     public void removeDigitalVideoDisc(DigitalVideoDisc disc) {
         for (int i = 0; i < itemOrdered; i++) {
