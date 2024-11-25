@@ -1,3 +1,7 @@
+package hust.soict.dsai.aims.cart;
+
+import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+
 public class Cart {
     private final DigitalVideoDisc[] items = new DigitalVideoDisc[20];
     private int itemOrdered = 0;
@@ -44,7 +48,7 @@ public class Cart {
         }
     }
 
-    // Print list of Cart
+    // Print list of hust.soict.dsai.aims.cart.Cart
     public void printCart() {
         System.out.println("***********************CART***********************");
         System.out.println("Ordered Items:");
@@ -60,7 +64,7 @@ public class Cart {
         System.out.println("***************************************************");
     }
 
-    //Search Cart by ID
+    //Search hust.soict.dsai.aims.cart.Cart by ID
     public DigitalVideoDisc searchById(int itemID) {
         for (int i = 0; i < itemOrdered; i++) {
             if (items[i].getId() == itemID) {
@@ -85,7 +89,7 @@ public class Cart {
         }
     }
 
-    // Delete DVD out of Cart
+    // Delete DVD out of hust.soict.dsai.aims.cart.Cart
     public void removeDigitalVideoDisc(DigitalVideoDisc disc) {
         for (int i = 0; i < itemOrdered; i++) {
             if (items[i] == disc) {

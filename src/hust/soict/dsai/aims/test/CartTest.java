@@ -1,3 +1,8 @@
+package hust.soict.dsai.aims.test;
+
+import hust.soict.dsai.aims.cart.Cart;
+import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+
 public class CartTest {
     public static void main(String[] args) {
         Cart cart = new Cart();
@@ -10,7 +15,7 @@ public class CartTest {
         cart.addDigitalVideoDisc(dvd2);
         cart.addDigitalVideoDisc(dvd3);
 
-        // Print list of Cart
+        // Print list of hust.soict.dsai.aims.cart.Cart
         cart.printCart();
 
         // Search with ID
