@@ -1,0 +1,9 @@
+1. Reading Assignment
+-Use for basic method that include simple attribute (dont involve complex logic)
+-Use when interacting with EXTERNAL Code
+-Use when no requirement for Security
+-Use if the attribute does not change frequently
+
+2. Question
+-Yes, Java allows users to create multiple constructors for a class that include different parameters
+-This is Overloading Method in OOP
