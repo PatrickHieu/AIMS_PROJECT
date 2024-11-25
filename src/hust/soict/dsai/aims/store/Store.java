@@ -1,3 +1,6 @@
+package hust.soict.dsai.aims.store;
+
+import hust.soict.dsai.aims.disc.DigitalVideoDisc;
 import java.util.ArrayList;
 
 public class Store {
@@ -22,7 +25,7 @@ public class Store {
         }
     }
 
-    // Print Store
+    // Print hust.soict.dsai.aims.store.Store
     public void printStore() {
         System.out.println("***********************CART***********************");
         System.out.println("Ordered Items:");

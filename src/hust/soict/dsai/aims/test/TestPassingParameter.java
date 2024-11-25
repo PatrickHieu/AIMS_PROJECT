@@ -1,4 +1,8 @@
-// Correctly swap method 
+package hust.soict.dsai.aims.test;
+
+import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+
+// Correctly swap method
 public class TestPassingParameter {
     public static void main(String[] args) {
         DigitalVideoDisc jungleDVD = new DigitalVideoDisc("Jungle");

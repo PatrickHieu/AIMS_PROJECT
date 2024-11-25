@@ -1,3 +1,7 @@
+package hust.soict.dsai.aims.test;
+
+import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+
 public class DigitalVideoDiscTest {
     public static void main(String[] args) {
         DigitalVideoDisc dvd1 = new DigitalVideoDisc("The Lion King");

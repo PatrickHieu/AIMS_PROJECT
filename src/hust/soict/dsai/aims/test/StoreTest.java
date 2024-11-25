@@ -1,6 +1,11 @@
+package hust.soict.dsai.aims.test;
+
+import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+import hust.soict.dsai.aims.store.Store;
+
 public class StoreTest {
     public static void main(String[] args) {
-        // Create new Store
+        // Create new hust.soict.dsai.aims.store.Store
         Store store = new Store();
 
         // Create DVDs
@@ -13,15 +18,15 @@ public class StoreTest {
         store.addDVD(dvd2);
         store.addDVD(dvd3);
 
-        // Print Store
-        System.out.println("Store List");
+        // Print hust.soict.dsai.aims.store.Store
+        System.out.println("hust.soict.dsai.aims.store.Store List");
         store.printStore();
 
         //Remove DVDs
         store.removeDVD(dvd3);
 
-        // Print Store after remove dvd3
-        System.out.println("Store List");
+        // Print hust.soict.dsai.aims.store.Store after remove dvd3
+        System.out.println("hust.soict.dsai.aims.store.Store List");
         store.printStore();
 
         // Remove unfound DVDs
