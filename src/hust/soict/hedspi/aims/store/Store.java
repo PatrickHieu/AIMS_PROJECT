@@ -1,6 +1,6 @@
-package hust.soict.dsai.aims.store;
+package hust.soict.hedspi.aims.store;
 
-import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+import hust.soict.hedspi.aims.disc.DigitalVideoDisc;
 import java.util.ArrayList;
 
 public class Store {
