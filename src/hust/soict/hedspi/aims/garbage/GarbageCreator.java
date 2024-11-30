@@ -1,4 +1,4 @@
-package hust.soict.dsai.aims.garbage;
+package hust.soict.hedspi.aims.garbage;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
