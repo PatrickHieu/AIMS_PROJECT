@@ -1,7 +1,11 @@
 package hust.soict.hedspi.aims.cart;
 
 import hust.soict.hedspi.aims.media.Media;
+import hust.soict.hedspi.aims.media.MediaComparatorByCostThenTitle;
+import hust.soict.hedspi.aims.media.MediaComparatorByTitleThenCost;
+
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Cart {
     private ArrayList<Media> itemsOrdered = new ArrayList<>();
@@ -88,4 +92,13 @@ public class Cart {
         }
         return total;
     }
+
+    public void sortByTitleThenCost() {
+        Collections.sort(itemsOrdered, new MediaComparatorByTitleThenCost());
+    }
+
+    public void sortByCostThenTitle() {
+        Collections.sort(itemsOrdered, new MediaComparatorByCostThenTitle());
+    }
+
 }

@@ -1,6 +1,8 @@
 package hust.soict.hedspi.aims.store;
 
 import hust.soict.hedspi.aims.media.DigitalVideoDisc;
+import hust.soict.hedspi.aims.media.Media;
+
 import java.util.ArrayList;
 
 public class Store {
@@ -36,5 +38,36 @@ public class Store {
                     + " - " + dvd.getLength() + ": " + dvd.getCost() + " $");
         }
         System.out.println("***************************************************");
+    }
+
+    // Search By Title
+    private ArrayList<Media> mediaList = new ArrayList<>();
+    private int countId = 1;
+
+    public int getNextId() {
+        return countId++;
+    }
+
+    public void addMedia(Media media) {
+        mediaList.add(media);
+    }
+
+    public void removeMedia(Media media) {
+        mediaList.remove(media);
+    }
+
+    public Media searchByTitle(String title) {
+        for (Media media : mediaList) {
+            if (media.getTitle().toLowerCase().contains(title.toLowerCase())) {
+                return media; 
+            }
+        }
+        return null; 
+    }
+
+    public void displayStore() {
+        for (Media media : mediaList) {
+            System.out.println(media);
+        }
     }
 }
