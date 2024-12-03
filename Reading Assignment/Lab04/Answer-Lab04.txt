@@ -1,0 +1,30 @@
+Question 1: What class should implement the Comparable interface?
+Lớp Media nên implement interface Comparable. Vì việc lớp Media implement vào Comparable sẽ cho phép các đối tượng Media 
+có thể được so sánh với nhau trong giỏ hàng, như sắp xếp theo tên hay chi phí ...
+
+Question 2: How should you implement the compareTo() method to reflect the ordering that we want?
+Khi implement Comparable, cần phải overide lại phương thức compareTo để xác định cách thức so sánh giữa các đối tượng Media.
+Thiết lập phương thức so sánh compareTo dựa trên thuộc tính của Media. 
+
+Question 3: Can we have two ordering rules of the item (by title then cost and by cost then title) if we use this Comparable interface approach?
+Có thể có 2 ordering rules cho các item. Nhưng compareTo chỉ hỗ trợ một quy tắc sắp xếp tại 1 thời điểm nên nếu muốn có 2 quy tắc sắp xếp khác 
+nhau ta nên tạo ra lớp con cho phương thức so sánh với từng quy tắc riêng biệt 
+
+Question 4: Suppose the DVDs have a different ordering rule from the other media types, that is by title, then decreasing length, then cost.
+How would you modify your code to allow this?
+Overide phương thức compareTo trong DigitalVideoDisc để có thể sắp xếp theo title, length giảm dần và giá 
+// So sánh theo title
+    int titleComparison = this.title.compareTo(dvd.title);
+    if (titleComparison != 0) {
+        return titleComparison;
+    }
+
+// So sánh theo length giảm dần
+    int lengthComparison = Float.compare(dvd.length, this.length);  // Length decreasing order
+    if (lengthComparison != 0) {
+        return lengthComparison;
+    }
+
+// So sánh theo cost nếu title và length bằng nhau
+    return Float.compare(this.cost, dvd.cost);
+        
