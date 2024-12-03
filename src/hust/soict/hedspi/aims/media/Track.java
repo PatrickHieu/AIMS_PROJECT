@@ -26,13 +26,15 @@ public class Track implements Playable {
         }
     }
 
+    @Override
     public boolean equals(Object obj) {
-        if (obj instanceof Track) {
-            Track track = (Track) obj;
-            if (this.title == track.title && this.length == track.length) {
-                return true;
-            }
-        }
-        return false;
+        if (this == obj)
+            return true;
+        if (obj == null || getClass() != obj.getClass())
+            return false;
+        Track track = (Track) obj;
+        if (length != track.length)
+            return false;
+        return title != null ? title.equals(track.title) : track.title == null;
     }
 }
