@@ -1,8 +1,8 @@
 package hust.soict.hedspi.aims.cart;
 
 import hust.soict.hedspi.aims.media.Media;
-import hust.soict.hedspi.aims.media.MediaComparatorByCostThenTitle;
-import hust.soict.hedspi.aims.media.MediaComparatorByTitleThenCost;
+import hust.soict.hedspi.aims.media.MediaComparatorByCostTitle;
+import hust.soict.hedspi.aims.media.MediaComparatorByTitleCost;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -94,11 +94,11 @@ public class Cart {
     }
 
     public void sortByTitleThenCost() {
-        Collections.sort(itemsOrdered, new MediaComparatorByTitleThenCost());
+        Collections.sort(itemsOrdered, new MediaComparatorByTitleCost());
     }
 
     public void sortByCostThenTitle() {
-        Collections.sort(itemsOrdered, new MediaComparatorByCostThenTitle());
+        Collections.sort(itemsOrdered, new MediaComparatorByCostTitle());
     }
 
 }
